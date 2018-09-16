@@ -4,14 +4,13 @@
 html, body {
 	height: 100%;
 }
-@import url('https://fonts.googleapis.com/css?family=Arvo');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 body {
 	background: white;
-	font-family: 'Arvo', sans-serif;
-	line-height: 1.5;
+	font-family: 'Open Sans', sans-serif;
 	color: #323232;
 	font-size: 15px;
-	font-weight: 400;
+	font-weight: 300;
 	margin: 0;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -141,7 +140,7 @@ div img {
 	
 }
 .home-h1 {
-	font-family: "Arvo", sans-serif;
+	font-family: "Open Sans", sans-serif;
 	color: white;
 	width: 100%;
 	font-size: 75px;
@@ -162,9 +161,8 @@ div img {
 	position: relative;
 }
 .Subsection {
-	font: 'Arvo', sans-serif;
+	font: "Open Sans", sans-serif;
 	width: 50%;
-	display: inline-block;
 	float: center;
 	color: #293133;
 	text-align: center;
@@ -341,7 +339,7 @@ div img {
 	color: #293133;
 	font-size: 15px;
 	font-weight: lighter;
-	width: 60%;
+	width: 70%;
 	margin: auto;
 }
 #yields {
@@ -1109,7 +1107,7 @@ div img {
 .rosace-container{
 	min-width: 350px;
 	min-height: 350px;
-	height: 80%;
+	height: 100%;
 	width: 80%;
     top: 0;
     left: 0;
@@ -2210,7 +2208,7 @@ div img {
 	margin-right: 35%;
 	margin-left: 35%;
 	margin-top: 30px;
-	font: "Arvo", sans-serif;
+	font: "Neue Helvetica® Georgian", sans-serif;
 	width: 30%;
 	display: inline-block;
 	float: center;
@@ -2232,7 +2230,7 @@ div img {
 .thanks-partners {
 	width: 80%;
 	margin: auto;
-	font: 'Arvo', sans-serif;
+	font: 'Neue Helvetica® Georgian', sans-serif;
 	color: #293133;
 	text-align: center;
 	font-size: 30px;
@@ -2288,7 +2286,7 @@ div img {
 .blog-phrase {
 	width: 30%;
 	margin: auto;
-	font: 'Arvo', sans-serif;
+	font: 'Neue Helvetica® Georgian', sans-serif;
 	color: #293133;
 	text-align: center;
 	font-size: 30px;
@@ -2311,3 +2309,192 @@ div img {
 	margin: 0;
 	margin-top: 60px;
 }
+
+.enlarged {
+    width: 400px;
+    height: 300px;
+}
+
+/*Eliminates padding, centers the thumbnail */
+
+body, html {
+padding: 0;
+margin: 0;
+text-align: center;
+}
+
+/* Styles the thumbnail */
+
+a.lightbox img {
+height: 150px;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+margin: 94px 20px 20px 20px;
+}
+
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+
+.lightbox-target {
+position: fixed;
+top: -100%;
+width: 100%;
+background: rgba(0,0,0,.7);
+width: 100%;
+opacity: 0;
+-webkit-transition: opacity .5s ease-in-out;
+-moz-transition: opacity .5s ease-in-out;
+-o-transition: opacity .5s ease-in-out;
+transition: opacity .5s ease-in-out;
+overflow: hidden;
+}
+
+/* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+
+.lightbox-target img {
+margin: auto;
+position: absolute;
+top: 0;
+left:0;
+right:0;
+bottom: 0;
+max-height: 0%;
+max-width: 0%;
+border: 3px solid white;
+box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+box-sizing: border-box;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Styles the close link, adds the slide down transition */
+
+a.lightbox-close {
+display: block;
+width:50px;
+height:50px;
+box-sizing: border-box;
+background: white;
+color: black;
+text-decoration: none;
+position: absolute;
+top: -80px;
+right: 0;
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:before {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(45deg);
+-moz-transform:rotate(45deg);
+-o-transform:rotate(45deg);
+transform:rotate(45deg);
+}
+
+/* Provides part of the "X" to eliminate an image from the close link */
+
+a.lightbox-close:after {
+content: "";
+display: block;
+height: 30px;
+width: 1px;
+background: black;
+position: absolute;
+left: 26px;
+top:10px;
+-webkit-transform:rotate(-45deg);
+-moz-transform:rotate(-45deg);
+-o-transform:rotate(-45deg);
+transform:rotate(-45deg);
+}
+
+/* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+
+.lightbox-target:target {
+opacity: 1;
+top: 0;
+bottom: 0;
+}
+
+.lightbox-target:target img {
+max-height: 100%;
+max-width: 100%;
+}
+
+.lightbox-target:target a.lightbox-close {
+top: 0px;
+}
+
+/* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+

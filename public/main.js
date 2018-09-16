@@ -158,3 +158,14 @@ jQuery(function(){
   $(".pillar-member-txt").height(0.3*pmemberheight);
 });
 
+$(document).ready(function(){
+    $('.modal').modal();
+  });
+
+$(document).ready(function(){
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+  });
+
+
+
