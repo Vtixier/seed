@@ -1926,10 +1926,12 @@ div img {
 .LTA{
 	background-image: url("img/LTA.png");
 }
+.echos{
+	background-image: url("img/echos.png");
+}
 #infomed{
 	background-image: url("img/infomed.png");
 }
-
 
 .talk-txt-container{
 	-webkit-box-flex: 2;
